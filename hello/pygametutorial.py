@@ -17,8 +17,8 @@ from pygame.locals import (
 )
 
 # Define constants for the screen width and height
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 648
+SCREEN_HEIGHT = 486
 
 
 # Define the Player object extending pygame.sprite.Sprite
@@ -27,7 +27,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         self.surf = pygame.Surface((75, 25))
-        self.surf.fill((255, 255, 255))
+        self.surf.fill((0, 255, 0))
         self.rect = self.surf.get_rect()
 
     # Move the sprite based on keypresses
@@ -58,7 +58,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
         self.surf = pygame.Surface((20, 10))
-        self.surf.fill((255, 255, 255))
+        self.surf.fill((255, 0, 0))
         self.rect = self.surf.get_rect(
             center=(
                 random.randint(SCREEN_WIDTH + 20, SCREEN_WIDTH + 100),
@@ -129,6 +129,9 @@ while running:
 
     # Fill the screen with black
     screen.fill((0, 0, 0))
+    bg = pygame.image.load("hello/jra.jpg")
+    rect_bg = bg.get_rect()
+    screen.blit(bg, rect_bg)
 
     # Draw all our sprites
     for entity in all_sprites:
