@@ -36,6 +36,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 # Fill the screen with white
 screen.fill((255, 255, 255))
 # pygame.display.update()
+player = Player()
 
 # Variable to keep the main loop running
 running = True
@@ -65,7 +66,7 @@ rect = surf.get_rect()
 screen.fill((0, 0, 0))
 
 # Draw the player on the screen
-screen.blit(Player.surf, Player.rect)
+screen.blit(player.surf, player.rect)
 
 # Update the display
 pygame.display.flip()
