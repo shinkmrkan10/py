@@ -7,7 +7,7 @@ pygame.init()
 screen = pygame.display.set_mode((300, 200))
 pygame.display.set_caption("This is pygame sample")
 while(True):
-    screen.fill((0,0,0,))
+    screen.fill((255,255,255,))
     pygame.draw.rect(screen, (255,255,0), Rect(10,10,20,50))
 
     pygame.display.update()

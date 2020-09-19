@@ -16,6 +16,7 @@ from pygame.locals import (
 # Initialize pygame
 pygame.init()
 
+
 # Define a Player object by extending pygame.sprite.Sprite
 # The surface drawn on the screen is now an attribute of 'player'
 class Player(pygame.sprite.Sprite):
@@ -26,16 +27,12 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.surf.get_rect()
 
 # Define constants for the screen width and height
-
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 # Create the screen object
 # The size is determined by the constant SCREEN_WIDTH and SCREEN_HEIGHT
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-# Fill the screen with white
-screen.fill((255, 255, 255))
-# pygame.display.update()
 
 # Variable to keep the main loop running
 running = True
@@ -54,12 +51,6 @@ while running:
         elif event.type == QUIT:
             running = False
 
-# Create a surface and pass in a tuple containing its length and width
-surf = pygame.Surface((50, 50))
-
-# Give the surface a color to separate it from the background
-surf.fill((0, 0, 0))
-rect = surf.get_rect()     
 
 # Fill the screen with black
 screen.fill((0, 0, 0))
