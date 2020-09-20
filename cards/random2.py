@@ -82,6 +82,7 @@ for i in range(10):
         print(mark, num, sep='', end=' ')
     print()
     print("Sorted")
+    # 数の順でソートする
     s_deck = sorted(deck, key=lambda x: x[1])
     for name in s_deck:
         mark = suite(name[0])
